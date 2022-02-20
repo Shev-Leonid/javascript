@@ -107,37 +107,54 @@
 //
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 // class Popelushka { name;age;footsize
-//
-//     constructor(name, age, footsize) {
-//         this.name = name;
-//         this.age = age;
-//         this.footsize = footsize;
-//     }
-//
-// };
-// let array = [
-//     new Popelushka ('Katya', 35, 36),
-//     new Popelushka ('Olya', 26, 37),
-//     new Popelushka ('Victoriya', 40, 42),
-//     new Popelushka ('Ira', 33, 35),
-//     new Popelushka ('Ruslana', 21, 36),
-//     new Popelushka ('Sveta', 29, 38),
-//     new Popelushka ('Orisya', 28, 37),
-//     new Popelushka ('Marta', 42, 39),
-//     new Popelushka ('Olesya', 19, 36),
-//     new Popelushka ('Tanya', 22, 36),
-// ];
-// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-// class Prince {name;age;shuzefound
-//
-//     constructor(name, age, shuzefound) {
-//         this.name = name;
-//         this.age = age;
-//         this.shuzefound = shuzefound;
-//     };
-// };
-// let prince = newPrince('Danylo',33,38);
+//// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// // //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// // //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// // class Prince {name;age;shuzefound
+// //
+class Popelushka {
+    constructor(name, age, footsize) {
+    this.name = name;
+    this.age = age;
+    this.footsize = footsize;
+}
+}
 
-// НЕ РОЗУМІЮ ЯК ЗРОБИТИ
+
+let arrayPop = [
+    new Popelushka ('Katya', 35, 36),
+    new Popelushka ('Olya', 26, 37),
+    new Popelushka ('Victoriya', 40, 42),
+    new Popelushka ('Ira', 33, 35),
+    new Popelushka ('Ruslana', 21, 36),
+    new Popelushka ('Sveta', 29, 38),
+    new Popelushka ('Orisya', 28, 37),
+    new Popelushka ('Marta', 42, 39),
+    new Popelushka ('Olesya', 19, 36),
+    new Popelushka ('Tanya', 22, 36),
+];
+console.log(arrayPop)
+class Prince {
+    constructor(name, age, shuzefound) {
+    this.name = name;
+    this.age = age;
+    this.shuzefound = shuzefound;
+};
+};
+let prince = new Prince('Danylo',33,38);
+
+let newPara =(Popelushka,prince)=> {
+    for (const item of arrayPop) {
+
+    } {
+        if (item.footsize === prince.shuzefound) {
+            return `tvoya popelushka: ${item.name}`
+        }
+
+    }
+}
+console.log(newPara(arrayPop,prince))
+
+
+let princess = arrayPop.find(x=>x.footsize === prince.shuzefound);
+console.log(princess)
